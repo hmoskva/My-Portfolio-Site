@@ -5,6 +5,46 @@
     <title>Title</title>
 </head>
 <body>
+<div id="app">
+    {{message}}
+</div>
 
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+<script>
+  const config = {
+    apiKey: 'AIzaSyCVJyObK2aCRFleRa0-xd1KtQ_BM3tUNC8',
+    authDomain: 'portfolio-faed7.firebaseapp.com',
+    databaseURL: 'https://portfolio-faed7.firebaseio.com',
+    projectId: 'portfolio-faed7',
+    storageBucket: 'portfolio-faed7.appspot.com',
+    messagingSenderId: '587600286915'
+  }
+  firebase.initializeApp(config)
+  const db = firebase.firestore()
+  db.collection('projects').get().then((querySnapshot) => {
+    console.log(querySnapshot, 'snap')
+//    querySnapshot.forEach((doc) => {
+//      console.log(`${doc.id} => ${doc.data()}`)
+//    })
+  })
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message: 'Hello Vue!',
+      projects: []
+    },
+    mounted () {
+      db.collection('projects').get().then((querySnapshot) => {
+        console.log(querySnapshot, 'snap')
+        this.projects = querySnapshot
+//    querySnapshot.forEach((doc) => {
+//      console.log(`${doc.id} => ${doc.data()}`)
+//    })
+      })
+    }
+  })
+</script>
 </body>
 </html>
