@@ -23,12 +23,7 @@
   }
   firebase.initializeApp(config)
   const db = firebase.firestore()
-  db.collection('projects').get().then((querySnapshot) => {
-    console.log(querySnapshot, 'snap')
-//    querySnapshot.forEach((doc) => {
-//      console.log(`${doc.id} => ${doc.data()}`)
-//    })
-  })
+
   const app = new Vue({
     el: '#app',
     data: {
