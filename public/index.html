@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Habib Sogbesan - Portfolio</title>
+</head>
+<body>
+<div id="app">
+  <main :class="{'bg-black': !lightMode}" class="h-100">
+    <div class="container">
+      <div class="row cover">
+        <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+          <figure>
+            <img src="img/me.PNG" class="img-thumbnail rounded-circle mx-auto mb-4 my-img" alt="My Picture">
+          </figure>
+          <h1 class="main-title" :class="{'text-light': !lightMode}">Habib Sogbesan</h1>
+          <span class="d-block mb-3 subtitle animated bounceInUp">Software Engineer</span>
+          <div class="text-center mb-5">
+            <a href="http://linkedin.com/in/habib-sogbesan-a6674512b" class="mx-2 pointer"><img
+                    src="img/linkedin.svg" alt="linkedIn logo" height="35"></a>
+            <a href="#" class="mx-2 pointer"><img src="img/github.svg" alt="Github logo" height="35"></a>
+            <a href="#" class="mx-2 pointer"><img src="img/curriculum.svg" alt="CV logo" height="35"
+                                                  title="CV Upload coming soon"></a>
+          </div>
+          <div class="material-switch pull-right">
+            <input id="someSwitchOptionDefault" name="modeSwitch" v-model="lightMode" type="checkbox"/>
+            <label for="someSwitchOptionDefault" class="label-default"></label>
+          </div>
+          <div class="text-center mt-5 mb-3">
+            <a href="#projects">
+              <img src="img/down-arrow.svg" alt="" class="pointer animated bounce infinite down" height="25">
+            </a>
+          </div>
+          <a href="#talk-to-me">Hit me up</a>
+        </div>
+      </div>
+      <div class="row mb-5 pt-5" id="projects">
+        <div class="col-12">
+          <div class="subtitle text-center ls-sm">
+            <img src="img/project-management.svg" alt="" height="40" class="mr-1">
+            Recent Works
+          </div>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-12 col-md-4" v-for="(project, index) in projects" :key="index">
+          <div class="project position-relative" :style="{'background-image': `url(${project.thumbnail})`}">
+            
+            <div class="overlay position-absolute text-center p-3 d-flex flex-column align-items-center justify-content-center">
+              <a :href="project.url" class="text-light mb-1 title d-block">{{project.name}}</a>
+              <div class="mb-2">
+            <span class="badge badge-pill badge-light mr-1 mr-md-2"
+                  v-for="(tag, index) in project.tags"
+                  :key="`tag_${index}`">{{tag}}</span>
+              </div>
+              <span style="font-weight: 100" class="text-light"
+                    v-if="project.description">{{project.description}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    <footer class="py-5 px-3 px-md-5">
+      <div class="container d-flex flex-column justify-content-center align-items-center" id="talk-to-me">
+        <h2 class="font-weight-bold text-light mb-5">Talk to me...</h2>
+        <form class="w-100" @submit.prevent="sendMail">
+          <div class="form-row mb-3 w-100">
+            <div class="col-12 col-sm-8 offset-sm-2 col-lg-6 offset-lg-3">
+              <input type="email"
+                     class="form-control"
+                     placeholder="Email Address"
+                     style="height: 57px;"
+                     required
+                     v-model="form.email">
+            </div>
+          </div>
+          <div class="form-row mb-3 w-100">
+            <div class="col-12 col-sm-8 offset-sm-2 col-lg-6 offset-lg-3">
+            <textarea class="form-control"
+                      placeholder="Message..."
+                      rows="6"
+                      required
+                      v-model="form.message"></textarea>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn-uwr form-submit mt-3" :disabled="sending">
+              <span v-if="!sending">Send</span>
+              <span v-else>Sending message...</span>
+            </button>
+          </div>
+        </form>
+        
+        
+        <div class="row mt-4 no-gutters">
+          <div class="col-12 text-center footer">
+            &copy; {{new Date().getFullYear()}}
+          </div>
+        </div>
+      </div>
+    
+    </footer>
+  
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="bundle.js"></script>
+<!--<script src="src/js/app.js"></script>-->
+</body>
+</html>
