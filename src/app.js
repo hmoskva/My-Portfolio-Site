@@ -18,7 +18,6 @@ const app = new Vue({
       try {
         this.sending = !this.sending;
         const mesgResp = await axios.post(this.mailFnURL, {...this.form});
-        console.log(mesgResp, 'is emsgresp');
 
         Object.keys(this.form).forEach(key => {
           this.form[key] = '';
@@ -33,9 +32,7 @@ const app = new Vue({
   },
   mounted() {
     db.collection('projects').where('active', '==', true).get().then((querySnapshot) => {
-      console.log(querySnapshot.docs, 'snap');
       querySnapshot.forEach(doc => {
-        console.log(doc.data());
         this.projects.unshift(doc.data());
       });
     });

@@ -1,10 +1,10 @@
 const config = {
-  apiKey: 'AIzaSyCVJyObK2aCRFleRa0-xd1KtQ_BM3tUNC8',
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: 'portfolio-faed7.firebaseapp.com',
   databaseURL: 'https://portfolio-faed7.firebaseio.com',
   projectId: 'portfolio-faed7',
   storageBucket: 'portfolio-faed7.appspot.com',
-  messagingSenderId: '587600286915'
+  messagingSenderId: process.env.FIREBASE__MESSAGE_SENDER_ID
 };
 
 firebase.initializeApp(config);
