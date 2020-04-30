@@ -86,6 +86,46 @@ main {
     background-color: #2BAFD8;
     border-radius: 8px;
 }
+/*New section: INTRO */
+.newSec{
+    background-color: #7510F7;
+    border-radius: 8px;
+    color: white;
+    padding: 30px;
+    box-shadow: 5px 5px 3px 1px rgb(204, 204, 204);
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
+    -webkit-transition: color 2s ease-out;
+    -moz-transition: color 2s ease-out;
+    -o-transition: color 2s ease-out;
+    transition: color 2s ease-out;
+    text-align: center;
+}
+
+.newSec:hover {
+    box-shadow: 5px 5px 3px 4px rgb(204, 204, 204);
+	color: rgba(51, 51, 51, 1);
+    background-color: violet;
+    cursor: pointer;
+    animation: wiggle 400ms 500ms 4 ease-out;
+}
+
+.newSec h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 17px;
+}
+
+.newSec p {
+    font-size: medium;
+    font-size: 19px;
+}
+/* End of INTRO */
 
 .overlay .title {
     font-size: 25px;
@@ -208,4 +248,16 @@ button:focus {
     height: 210px;
     object-fit: cover;
     width: 210px;
+}
+/* animation for INTRO */
+@keyframes wiggle {
+    0% {
+        transform: rotateZ(0);
+    }
+    50%{
+        transform: rotateZ(-3deg);
+    }
+    100% {
+        transform: rotateZ(3deg)
+    }
 }
