@@ -93,21 +93,28 @@ main {
     color: white;
     padding: 30px;
     box-shadow: 5px 5px 3px 1px rgb(204, 204, 204);
-    -webkit-transition: background-color 2s ease-out;
+    text-align: center;
+    padding: 100px;
+    margin-bottom: 60px;
+    /* -webkit-transition: background-color 2s ease-out;
     -moz-transition: background-color 2s ease-out;
     -o-transition: background-color 2s ease-out;
     transition: background-color 2s ease-out;
     -webkit-transition: color 2s ease-out;
     -moz-transition: color 2s ease-out;
     -o-transition: color 2s ease-out;
-    transition: color 2s ease-out;
-    text-align: center;
+    transition: color 2s ease-out; */ 
+}
+
+.bg-black .newSec{
+    background-color: snow;
+    color: black;
 }
 
 .newSec:hover {
     box-shadow: 5px 5px 3px 4px rgb(204, 204, 204);
-	color: rgba(51, 51, 51, 1);
-    background-color: violet;
+	/* color: rgba(51, 51, 51, 1);
+    background-color: violet; */
     cursor: pointer;
     animation: wiggle 400ms 500ms 4 ease-out;
 }
@@ -119,6 +126,7 @@ main {
     align-items: center;
     justify-content: center;
     padding-bottom: 17px;
+    margin-bottom: 30px;
 }
 
 .newSec p {
@@ -249,15 +257,38 @@ button:focus {
     object-fit: cover;
     width: 210px;
 }
+
 /* animation for INTRO */
 @keyframes wiggle {
     0% {
         transform: rotateZ(0);
     }
     50%{
-        transform: rotateZ(-3deg);
+        transform: rotateZ(-1deg);
     }
     100% {
-        transform: rotateZ(3deg)
+        transform: rotateZ(1deg)
     }
 }
+
+.skillSec {
+    background-color: black;
+    height: 300px;
+    max-height: 300px;
+    position: relative;
+    padding:72px 55px;
+    margin-bottom: 440px;
+}
+
+.skillSec .skill-col{
+    border: 1px solid black;
+    height: 600px;
+    background: white;
+}
+
+@media(max-width:600px){
+    .newSec{
+    padding: 33px;
+    }
+}
+    
