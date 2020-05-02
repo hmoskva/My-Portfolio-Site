@@ -277,18 +277,32 @@ button:focus {
     max-height: 300px;
     position: relative;
     padding:72px 55px;
-    margin-bottom: 440px;
+    /* margin-bottom: 440px; */
 }
-
-.skillSec .skill-col{
-    border: 1px solid black;
+.skill-container{
+    position: relative;
+    top: -85px;
+}
+.skill-rows .skill-col{
+    border: 1px solid #0000001c;
     height: 600px;
     background: white;
 }
+/* .skill-rows .skill-col{
 
+} */
 @media(max-width:600px){
     .newSec{
     padding: 33px;
+    }
+    .skill-container{
+        top: 0;
+    }
+    .skill-rows .skill-col{
+      
+        height: 350px;
+        margin-bottom: 17px;
+        background: white;
     }
 }
     
