@@ -13,6 +13,9 @@
 <body>
 <div id="app">
   <main :class="{'bg-black': !lightMode}" class="h-100">
+    <nav class="navbar navbar-dark bg-dark">
+      <span class="navbar-brand mb-0 h1">Navbar</span>
+    </nav>
     <div class="container">
       <div class="row cover">
         <div class="col-12 d-flex flex-column justify-content-center align-items-center">
@@ -71,14 +74,20 @@
         </div>
       </div>
     </div>
-
-      <div class="row skillSec no-gutters text-center">
-        <div class="col-12 text-center mb-5 text-light">
-          <h1  class="intro"> Here are my skills</h1>
-          <p class="intro_text">Since beginning my journey as a freelance designer nearly 8 years ago</p>
+      <!-- <section class="skillSec">
+ 
+      </section> -->
+             <div class="skillSec row no-gutters">
+          <div class="col-12 text-center mb-5 text-light">
+            <h1> Here are my skills</h1>
+            <p class="intro_text">Since beginning my journey as a freelance designer nearly 8 years ago</p>
+          </div>
         </div>
-        <div class="col-4 skill-col col1">
-          <h3><b>Designer</b></h3>
+
+        <div class="container skill-container text-center">
+          <div class="row skill-rows">
+            <div class="col-12 col-sm-4 skill-col col1">
+              <h3><b>Designer</b></h3>
           <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p><br>
           <p class="purple-text"><b>Things I enjoy designing:</b></p>
           <p>UX, UI, Web, Mobile, Apps, Logos</p><br>
@@ -93,41 +102,45 @@
             <li>Webflow</li>            
             <li>Zeplin</li>
           </ul>
-        </div>
-        <div class="col-4 skill-col col2">
-          <h3><b>Front-end Developer</b></h3>
-          <p>I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p><br>
-          <p class="purple-text"><b>Languages I speak:</b></p>
-          <p>HTML, Pug, Slim, CSS, Sass, Less</p><br>
-          <p class="purple-text"><b>Dev Tools:</b></p>
+            </div>
+            <div class="col-12 col-sm-4 skill-col col2">
+              <h3><b>Designer</b></h3>
+          <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p><br>
+          <p class="purple-text"><b>Things I enjoy designing:</b></p>
+          <p>UX, UI, Web, Mobile, Apps, Logos</p><br>
+          <p class="purple-text"><b>Design Tools:</b></p>
           <ul style="list-style-type:none;">
-            <li>Atom</li>
-            <li>Bitbucket</li>
-            <li>Bootstrap</li>
-            <li>Bulma</li>
-            <li>Codekit</li>
-            <li>Codepen</li>            
-            <li>Github</li>
+            <li>Figma</li>
+            <li>Invision</li>
+            <li>Marvel</li>
+            <li>Pen & Paper
+            </li>
+            <li>Sketch</li>
+            <li>Webflow</li>            
+            <li>Zeplin</li>
           </ul>
-        </div>
-        <div class="col-4 skill-col col3">
-          <h3><b>Mentor</b></h3>
-          <p>I genuinely care about people, and love helping fellow designers work on their craft.</p><br>
-          <p class="purple-text"><b>Experiences I draw from:
-          </b></p>
-          <p>UX/UI, Product design, Freelancing</p><br>
-          <p class="purple-text"><b>Mentor Stats:</b></p>
+            </div>
+            <div class="col-12 col-sm-4 skill-col col3">
+              <h3><b>Designer</b></h3>
+          <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p><br>
+          <p class="purple-text"><b>Things I enjoy designing:</b></p>
+          <p>UX, UI, Web, Mobile, Apps, Logos</p><br>
+          <p class="purple-text"><b>Design Tools:</b></p>
           <ul style="list-style-type:none;">
-            <li>4.5 years experience</li>
-            <li>4.5 years experience</li>
-            <li>40 bootcamps</li>
-            <li>125+ students</li>
-            <li>1,300+ mentor sessions</li>
-            <li>60+ group critiques</li>            
-            <li>10,500+ comments</li>
+            <li>Figma</li>
+            <li>Invision</li>
+            <li>Marvel</li>
+            <li>Pen & Paper
+            </li>
+            <li>Sketch</li>
+            <li>Webflow</li>            
+            <li>Zeplin</li>
           </ul>
+            </div>
+          </div>
         </div>
-      </div>
+   
+
 
     <footer class="py-5 px-3 px-md-5">
       <div class="container d-flex flex-column justify-content-center align-items-center" id="talk-to-me">
