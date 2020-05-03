@@ -12,8 +12,37 @@ main {
     transition: background-color 0.5s;
 }
 
+.navbar {
+    height: 80px;
+}
+
+.navbar-brand {
+    position: absolute;
+    right: 150px;
+}
+
 .bg-black {
     background-color: #000000d4;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2c2c2cd4; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b11226; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #800515; 
 }
 
 .cover {
@@ -88,7 +117,7 @@ main {
 }
 /*New section: INTRO */
 .newSec{
-    background-color: #7510F7;
+    background-color: #b11226;
     border-radius: 8px;
     color: white;
     padding: 30px;
@@ -212,7 +241,7 @@ main {
 
 footer {
     height: auto;
-    background: linear-gradient(90deg, rgba(0, 0, 0, .9) 0%, #f8f9fa 100%);
+    background: linear-gradient(90deg, #b11226 0%, #f08f9c 100%);
 }
 
 .btn-uwr {
@@ -272,7 +301,7 @@ button:focus {
 }
 
 .skillSec {
-    background-color: #7510F7;
+    background-color: #e2475c;
     height: 300px;
     max-height: 300px;
     position: relative;
@@ -295,8 +324,8 @@ button:focus {
     padding-left: 0;
 }
 
-.purple-text {
-    color: #7510F7;
+.brown-text {
+    color: #b11226;
     font-family: "Raleway", sans-serif;
     font-weight: bold;
 }
@@ -309,9 +338,11 @@ button:focus {
     border-top-right-radius: 8px;
 
 }
-/* .skill-rows .skill-col{
 
-} */
+.social-links {
+    margin-top: 15px;
+}
+
 @media(max-width:600px){
     .newSec{
     padding: 33px;

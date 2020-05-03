@@ -14,7 +14,9 @@
 <div id="app">
   <main :class="{'bg-black': !lightMode}" class="h-100">
     <nav class="navbar navbar-dark bg-dark">
-      <span class="navbar-brand mb-0 h1">Navbar</span>
+      <span class="navbar-brand h1">Navbar</span>
+      <button style ="position: absolute;
+      right: 30px;" type="button" class="btn btn-outline-light">Contact Me</button>
     </nav>
     <div class="container">
       <div class="row cover">
@@ -41,7 +43,9 @@
               <img src="img/down-arrow.svg" alt="" class="pointer animated bounce infinite down" height="25">
             </a>
           </div>
-          <a href="#talk-to-me">Hit me up</a>
+          <button type="button" class="btn btn-danger">
+            <a class="text-light" href="#talk-to-me">Hit me up</a>
+          </button>
         </div>
       </div>
       <section class="newSec col-12 flex-center">
@@ -89,9 +93,9 @@
             <div class="col-12 col-sm-4 skill-col col1">
               <h3><b>Designer</b></h3>
           <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p><br>
-          <p class="purple-text"><b>Things I enjoy designing:</b></p>
+          <p class="brown-text"><b>Things I enjoy designing:</b></p>
           <p>UX, UI, Web, Mobile, Apps, Logos</p><br>
-          <p class="purple-text"><b>Design Tools:</b></p>
+          <p class="brown-text"><b>Design Tools:</b></p>
           <ul style="list-style-type:none;">
             <li>Figma</li>
             <li>Invision</li>
@@ -106,9 +110,9 @@
             <div class="col-12 col-sm-4 skill-col col2">
               <h3><b>Designer</b></h3>
           <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p><br>
-          <p class="purple-text"><b>Things I enjoy designing:</b></p>
+          <p class="brown-text"><b>Things I enjoy designing:</b></p>
           <p>UX, UI, Web, Mobile, Apps, Logos</p><br>
-          <p class="purple-text"><b>Design Tools:</b></p>
+          <p class="brown-text"><b>Design Tools:</b></p>
           <ul style="list-style-type:none;">
             <li>Figma</li>
             <li>Invision</li>
@@ -123,9 +127,9 @@
             <div class="col-12 col-sm-4 skill-col col3">
               <h3><b>Designer</b></h3>
           <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p><br>
-          <p class="purple-text"><b>Things I enjoy designing:</b></p>
+          <p class="brown-text"><b>Things I enjoy designing:</b></p>
           <p>UX, UI, Web, Mobile, Apps, Logos</p><br>
-          <p class="purple-text"><b>Design Tools:</b></p>
+          <p class="brown-text"><b>Design Tools:</b></p>
           <ul style="list-style-type:none;">
             <li>Figma</li>
             <li>Invision</li>
@@ -180,7 +184,13 @@
           </div>
         </div>
       </div>
-    
+
+      <div class="text-center mb-5 social-links">
+        <a href="http://linkedin.com/in/habib-sogbesan-a6674512b" class="mx-2 pointer"><img
+                src="img/linkedin.svg" alt="linkedIn logo" height="35"></a>
+        <a href="#" class="mx-2 pointer"><img src="img/github.svg" alt="Github logo" height="35"></a>
+        <a href="#" class="mx-2 pointer"><img src="img/curriculum.svg" alt="CV logo" height="35"
+                                              title="CV Upload coming soon"></a>
     </footer>
   
   </main>
