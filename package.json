@@ -26,6 +26,6 @@
     "webpack-dev-server": "^3.8.2"
   },
   "dependencies": {
-    "firebase-functions": "^3.2.0"
+    "firebase-functions": "^3.24.1"
   }
 }
